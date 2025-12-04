@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Projects — TechSolutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Logo" width="100px" />
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="btn-primary nav-cta request-service-btn">Request Service</button>
+                <button class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Page -->
+    <main class="projects-page">
+        <!-- Hero Section -->
+        <section class="projects-hero">
+            <div class="projects-hero-bg"></div>
+            <div class="container">
+                <div class="projects-hero-content">
+                    <h1 class="projects-hero-title">
+                        Our <span class="gradient-text-neon">Projects</span>
+                    </h1>
+                    <p class="projects-hero-sub">Cutting-edge solutions across web, mobile, and desktop platforms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="projects-filter-section">
+            <div class="container">
+                <div class="filter-controls">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">View All</button>
+                        <button class="filter-btn" data-filter="web">Web</button>
+                        <button class="filter-btn" data-filter="application">Application</button>
+                    </div>
+                    <div class="filter-dropdown-wrapper">
+                        <select id="industryFilter" class="filter-dropdown">
+                            <option value="all">Filter by Industries</option>
+                            <option value="finance">Finance</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="legal">Legal</option>
+                            <option value="tech">Technology</option>
+                            <option value="education">Education</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-list" aria-labelledby="projects-heading">
+            <div class="container">
+                <h2 id="projects-heading" class="sr-only">Projects</h2>
+
+                <div class="projects-grid" id="projectsGrid">
+                    <!-- Project 1 -->
+                    <article class="project-card" data-category="web" data-industry="healthcare">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyAPMG.html"><img src="images/apmg-mockup.jpg"
+                                    alt="Mekra Mental Health Platform" class="project-image"></a>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-category-label">Web Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Healthcare</span>
+                                <span class="project-tag">Medical</span>
+                            </div>
+                            <h3 class="project-title">Advance Medical Group
+                                <p class="project-desc">TypeScript-powered healthcare platform with advanced medical
+                                    data management and patient engagement tools.</p>
+                                <div class="project-stack">
+                                    <span class="stack-badge">React</span>
+                                    <span class="stack-badge">AWS</span>
+                                    <!-- <span class="stack-badge">TypeScript</span> -->
+                                </div>
+                        </div>
+                    </article>
+                    <!-- Project 2 -->
+                    <article class="project-card" data-category="web" data-industry="legal">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyAnku.html"><img src="images/anku.jpeg" alt="SN ANKU IP FIRM WEBSITE"
+                                    class="project-image"></a>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-category-label">Web Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Legal</span>
+                                <span class="project-tag">Corporate</span>
+                            </div>
+                            <h3 class="project-title">SN ANKU IP FIRM</h3>
+                            <p class="project-desc">Modern React-based website for intellectual property firm with
+                                elegant UI and robust functionality.</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">React</span>
+                                <span class="stack-badge">Node.js</span>
+                                <span class="stack-badge">AWS</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 3 -->
+                    <article class="project-card" data-category="web" data-industry="tech">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyKudiex.html"><img src="images/kudiex.png"
+                                    alt="Mekra Mental Health Platform" class="project-image"></a>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-category-label">Web Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Fnance</span>
+                                <span class="project-tag">Cryptocurrency</span>
+                            </div>
+                            <h3 class="project-title">Kudiex Crypto</h3>
+                            <p class="project-desc">A website for Cryptocurrency application</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">TypeScript</span>
+                                <span class="stack-badge">React</span>
+                                <span class="stack-badge">AWS</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 3-->
+                    <article class="project-card" data-category="mobile" data-industry="tech">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyPuduoshop.html"><img src="images/puduoshop.png" alt="Mobile App Project"
+                                    class="project-image"></a>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-category-label">Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Technology</span>
+                                <span class="project-tag">Application</span>
+                            </div>
+                            <h3 class="project-title">Puduo Shop App </h3>
+                            <p class="project-desc">A shop App for shop management</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">React</span>
+                                <span class="stack-badge">AWS</span>
+                                <!-- <span class="stack-badge">Expo</span> -->
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 4 -->
+                    <article class="project-card" data-category="desktop" data-industry="tech">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyLegal.html"> <img src="images/litigation.jpg" alt="Desktop Finance App"
+                                    class="project-image">
+                                <div class="project-image-overlay"></div>
+                                <div class="project-category-label">Application</div>
+                            </a>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Technology</span>
+                                <span class="project-tag">Application</span>
+                            </div>
+                            <h3 class="project-title">Puduo Legal</h3>
+                            <p class="project-desc">Application for Litigation management</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">React</span>
+                                <span class="stack-badge">Node.js</span>
+                                <span class="stack-badge">AWS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card" data-category="desktop" data-industry="legal">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyCMS.html"><img src="images/cms.jpg" alt="Desktop Finance App"
+                                    class="project-image">
+                                <div class="project-image-overlay"></div>
+                                <div class="project-category-label">Application</div>
+                            </a>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Legal</span>
+                                <span class="project-tag">Corporate</span>
+                            </div>
+                            <h3 class="project-title">CMS App</h3>
+                            <p class="project-desc">Application for website content management</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">React</span>
+                                <span class="stack-badge">Node.js</span>
+                                <span class="stack-badge">AWS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="project-card" data-category="web" data-industry="healthcare">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyMekra.html"><img src="images/mekra.jpeg"
+                                    alt="Mekra Mental Health Platform" class="project-image"></a>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-category-label">Web Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Healthcare</span>
+                                <span class="project-tag">Wellness</span>
+                            </div>
+                            <h3 class="project-title">Mekra Platform</h3>
+                            <p class="project-desc">Modern React-based mental health platform connecting users with
+                                wellness resources and professional support.</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">React.js</span>
+                                <span class="stack-badge">Node.js</span>
+                                <span class="stack-badge">AWS</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="project-card" data-category="web" data-industry="education">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyAto.html">
+                                <img src="images/atoBG.jpg" alt="Education Platform" class="project-image">
+                            </a>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-category-label">Web Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Education</span>
+                                <span class="project-tag">Learning</span>
+                            </div>
+                            <h3 class="project-title">Ato Kwabena Blog</h3>
+                            <p class="project-desc">A blog web application</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">React</span>
+                                <span class="stack-badge">Node.js</span>
+                                <span class="stack-badge">AWS</span>
+                            </div>
+                        </div>
+                    </article>
+                    <!-- Project 7-->
+                    <article class="project-card" data-category="web" data-industry="education">
+                        <div class="project-image-wrapper">
+                            <a href="case-studyNico.html">
+                                <img src="images/nico.png" alt="Education Platform" class="project-image">
+                            </a>
+                            <div class="project-image-overlay"></div>
+                            <div class="project-category-label">Web Application</div>
+                        </div>
+                        <div class="project-body">
+                            <div class="project-tags">
+                                <span class="project-tag">Education</span>
+                                <span class="project-tag">Learning</span>
+                            </div>
+                            <h3 class="project-title">Nico Wayo</h3>
+                            <p class="project-desc">Contemporary Artist Website</p>
+                            <div class="project-stack">
+                                <span class="stack-badge">React</span>
+                                <span class="stack-badge">Node.js</span>
+                                <span class="stack-badge">AWS</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="description" width="100px" />
+
+                        <!-- <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="8" fill="#2563EB" />
+                            <path d="M20 12L26 18H22V24H18V18H14L20 12Z" fill="white" />
+                            <path d="M20 28L14 22H18V16H22V22H26L20 28Z" fill="white" />
+                        </svg>
+                        <span class="logo-text">TechSolutions</span> -->
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for innovative IT solutions that drive business growth.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="https://web.facebook.com/profile.php?id=61573105004412"
+                            class="social-link">Facebook</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Cloud Infrastructure</a></li>
+                        <li><a href="#">Cybersecurity</a></li>
+                        <li><a href="#">Software Development</a></li>
+                        <li><a href="#">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: info@puduotechnologies.com</li>
+                        <li>Phone: +1 (571) 239-5412</li>
+                        <li>Address:109 Huntington Way Dallas GA 30132 United States, Dallas, TX, United States, Texas
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;Copyright 2025 Puduo. All Rights Reserved .</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared-modal.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
