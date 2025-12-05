@@ -1,0 +1,458 @@
+/* Case Study Template Styles
+   Relies on site-wide tokens in styles.css (colors, fonts, container, breakpoints)
+*/
+
+/* Case Study uses site-wide design tokens from styles.css
+   Primary: #64B5F6 | Secondary: #202349 | Text: #0F172A | Light: #F8FAFC
+*/
+:root {
+    --accent-orange: #F59E0B;
+    --accent-blue: var(--primary-color, #64B5F6);
+}
+
+/* HERO */
+.case-hero {
+    position: relative;
+    padding: 160px 0 96px;
+    color: white;
+    background-image: var(--hero-image);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.case-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(6, 10, 22, 0.6), rgba(6, 10, 22, 0.75));
+    mix-blend-mode: multiply;
+}
+
+.case-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 920px;
+    padding: 32px 0;
+}
+
+.case-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 18px;
+    letter-spacing: 0.2px;
+    backdrop-filter: blur(6px);
+    animation: fadeInUp .7s ease both;
+}
+
+.case-title {
+    font-size: 56px;
+    line-height: 1.04;
+    margin: 0 0 14px 0;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+    max-width: 920px;
+    animation: fadeInUp .8s ease both;
+}
+
+.case-lead {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 18px;
+    max-width: 760px;
+    margin-bottom: 4px;
+    animation: fadeInUp 1s ease both;
+}
+
+/* subtle glow under hero title for better contrast */
+.case-hero-inner::after {
+    content: '';
+    display: block;
+    height: 14px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.06));
+    margin-top: 18px;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(12px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1
+    }
+}
+
+/* Template notes (removable helper for editing) */
+.template-notes {
+    animation: fadeInUp 1.2s ease both;
+}
+
+/* Sub navigation */
+.case-subnav-wrap {
+    background: transparent;
+}
+
+.case-subnav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 12px 0;
+    position: relative;
+    z-index: 900;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+}
+
+.case-subnav a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background .18s ease, color .18s ease;
+    flex: 0 0 auto;
+}
+
+.case-subnav a:hover {
+    background: rgba(15, 23, 42, 0.03);
+}
+
+.case-subnav a.active {
+    color: var(--text-primary);
+    background: linear-gradient(90deg, rgba(100, 181, 246, 0.12), rgba(139, 92, 246, 0.06));
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.06);
+}
+
+.case-subnav a:focus {
+    outline: 3px solid rgba(100, 181, 246, 0.12);
+    outline-offset: 3px;
+}
+
+.case-subnav.sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 72px;
+    /* adjusted under navbar */
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+    padding: 10px 0;
+    z-index: 999;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+/* Sections (match Landing Page spacing/tokens) */
+.case-section {
+    padding: 80px 0;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 48px;
+    align-items: start;
+}
+
+.case-overview h2 {
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.case-overview p {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.case-sidecards .card {
+    position: relative;
+    background: var(--bg-white);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+    border: 1px solid rgba(15, 23, 42, 0.04);
+    margin-bottom: 24px;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    overflow: visible;
+}
+
+.case-sidecards .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+/* gradient border glow */
+.case-sidecards .card::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .25s ease;
+    background: linear-gradient(90deg, #64B5F6, #8B5CF6);
+    filter: blur(12px);
+}
+
+.case-sidecards .card:hover::before {
+    opacity: 0.15;
+}
+
+.case-sidecards .card h4 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.tech-list {
+    list-style: none;
+    padding-left: 0;
+    color: var(--text-secondary);
+}
+
+.tech-list li {
+    padding: 8px 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.tech-list .icon {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.03), rgba(15, 23, 42, 0.01));
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.tech-list .icon:hover {
+    transform: translateY(-3px) scale(1.06);
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.06);
+}
+
+/* icon hover animation for svg replacement */
+.tech-list .icon svg {
+    transition: transform .25s ease;
+}
+
+.tech-list .icon:hover svg {
+    transform: translateY(-2px) rotate(-6deg);
+}
+
+/* Challenge/Solution (match site colors) */
+.challenge-solution .cs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.cs-card {
+    padding: 32px;
+    border-radius: 12px;
+    color: white;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cs-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cs-card p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.cs-card.challenge {
+    background: linear-gradient(135deg, #F59E0B, #D97706);
+}
+
+.cs-card.solution {
+    background: linear-gradient(135deg, #64B5F6, #1E88E5);
+}
+
+/* Case block reusable (match Landing Page pattern) */
+.case-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.case-block {
+    display: flex;
+    gap: 24px;
+    background: var(--bg-white);
+    padding: 28px;
+    border-radius: 12px;
+    align-items: center;
+    border: 1px solid rgba(15, 23, 42, 0.04);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.case-block:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.case-block .cb-content {
+    flex: 1;
+}
+
+.case-block .cb-content h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.case-block .cb-content p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.case-block .cb-media {
+    width: 240px;
+    max-width: 40%;
+}
+
+.case-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+.case-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* small cases with no image */
+.case-block .cb-media:empty {
+    display: none;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+/* reveal animation helper (JS toggles .in-view for IntersectionObserver) */
+.reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: all .7s cubic-bezier(.2, .9, .25, 1);
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-sidecards {
+        order: 2;
+    }
+
+    .case-overview {
+        order: 1;
+    }
+
+    .case-hero {
+        padding: 120px 0 60px;
+    }
+
+    .case-title {
+        font-size: 36px;
+    }
+
+    .case-subnav.sticky {
+        top: 64px;
+    }
+
+    .case-subnav {
+        gap: 14px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .case-subnav a {
+        padding: 10px 16px;
+    }
+
+    .cs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .case-hero {
+        padding: 96px 0 48px;
+    }
+
+    .case-title {
+        font-size: 24px;
+    }
+
+    .case-block {
+        flex-direction: column;
+    }
+
+    .case-block .cb-media {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .case-subnav {
+        gap: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .case-subnav a {
+        padding: 12px 14px;
+        font-size: 15px;
+    }
+
+    .case-grid {
+        gap: 32px;
+    }
+}
+
+/* Ensure subnav can be scrolled without page horizontal scroll */
+html,
+body {
+    overscroll-behavior-x: none;
+}
