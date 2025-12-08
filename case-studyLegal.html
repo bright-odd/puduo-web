@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Case Study — Example</title>
+    <!-- reuse site variables + base styles -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- template-specific styles -->
+    <link rel="stylesheet" href="case-study.css">
+</head>
+
+<body>
+    <!-- Navigation (reused from site) -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo.png" alt="logo" width="100px" />
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <button class="btn-primary nav-cta request-service-btn">Request Service</button>
+                <button class="mobile-menu-toggle" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="case-hero" id="caseHero" style="--hero-image: url('images/litigation.jpg')">
+        <div class="case-hero-overlay"></div>
+        <div class="container">
+            <div class="case-hero-inner">
+                <span class="case-badge">Tech</span>
+                <h1 class="case-title">PUDUO LEGAL</h1>
+                <p class="case-lead">Application for litigation management</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Template notes: editable regions and quick instructions (remove when publishing) -->
+    <!-- <div class="container template-notes" aria-hidden="false" style="margin-top:10px;">
+        <div
+            style="background:var(--bg-white);border-radius:8px;padding:10px;border:1px dashed var(--border-color);font-size:13px;color:var(--text-secondary);">
+            <strong style="color:var(--text-primary);">Template editable regions:</strong>
+            <ul style="margin-top:6px;">
+                <li><code>.case-hero</code>: set hero image via inline <code>--hero-image</code> or update
+                    <code>style</code> attribute.
+                </li>
+                <li><code>.case-badge</code>, <code>.case-title</code>, <code>.case-lead</code>: replace
+                    category/title/lead text.</li>
+                <li><code>.case-subnav a</code>: add/remove tabs; ensure section <code>id</code> matches
+                    <code>data-target</code>.
+                </li>
+                <li><code>.tech-list li</code> and <code>.services-card .tech-list li</code>: swap icon by changing the
+                    <code>data-icon</code> attribute or replacing the <code>&lt;svg&gt;/emoji</code>.
+                </li>
+                <li><code>.case-block</code>: duplicate and add <code>reverse</code> class to flip image/text.</li>
+            </ul>
+            <div style="margin-top:8px;color:var(--text-light)">Tip: icons are placed in
+                <code>&lt;span class="icon" data-icon="name"&gt;</code> within each list item for easy replacement.
+            </div>
+        </div>
+    </div> -->
+
+    <!-- Sub navigation (sticky tabs) -->
+    <div class="case-subnav-wrap">
+        <div class="container">
+            <nav class="case-subnav" id="caseSubnav" aria-label="Case study sections">
+                <a href="#overview" class="case-tab" data-target="overview">Overview</a>
+                <a href="#challenges" class="case-tab" data-target="challenges">Challenges</a>
+                <a href="#ux" class="case-tab" data-target="ux">UI/UX</a>
+                <a href="#solution" class="case-tab" data-target="solution">Solution</a>
+            </nav>
+        </div>
+    </div>
+
+    <main>
+        <!-- Overview -->
+        <section id="overview" class="case-section">
+            <div class="container case-grid">
+                <div class="case-overview reveal">
+                    <h2>Overview</h2>
+                    <p>
+                        Puduo Legal is a litigation management application designed to streamline the day-to-day
+                        workflow of legal practitioners, law firms, and case managers. It centralizes case details,
+                        deadlines, documents, and communication into one digital environment, helping teams stay
+                        organized, reduce administrative burden, and improve case handling efficiency.
+                    </p>
+                    <div class="video-wrapper">
+                        <div class="video-box">
+                            <img src="images/litigation.jpg" class="video-thumb" alt="Video Thumbnail">
+                            <button class="video-play" id="playVideoBtn">▶</button>
+
+                            <video id="mainVideo" class="video-el" controls preload="none">
+                                <source src="videos/dashboard.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- <p>
+                        We redesigned the onboarding funnel, shipped an offline-first PWA, and integrated resilient APIs
+                        to improve reliability and conversion.
+                    </p> -->
+                </div>
+
+                <aside class="case-sidecards">
+                    <div class="card tech-card reveal">
+                        <h4>Technologies</h4>
+                        <ul class="tech-list">
+                            <li><span class="icon" data-icon="js">🟨</span> React</li>
+                            <li><span class="icon" data-icon="sw">⚡</span> AWS</li>
+                            <li><span class="icon" data-icon="node">🟩</span> Node.js</li>
+                        </ul>
+                    </div>
+
+                    <!-- <div class="card services-card reveal">
+                        <h4>Services</h4>
+                        <ul class="tech-list">
+                            <li><span class="icon" data-icon="ux">🎨</span> UX Research</li>
+                            <li><span class="icon" data-icon="fe">🧩</span> Frontend Engineering</li>
+                            <li><span class="icon" data-icon="api">🔗</span> API Integration</li>
+                            <li><span class="icon" data-icon="perf">🚀</span> Performance Optimisation</li>
+                        </ul>
+                    </div> -->
+                </aside>
+            </div>
+        </section>
+
+        <!-- Challenges / Solution -->
+        <section id="challenges" class="case-section challenge-solution">
+            <div class="container">
+                <div class="cs-grid">
+                    <div class="cs-card challenge reveal">
+                        <h3>Their Challenge</h3>
+                        <p>
+                            Legal professionals often manage dozens of cases simultaneously, each carrying critical
+                            deadlines, documents, hearings, and client information. Many firms still rely on fragmented
+                            systems such as email threads, spreadsheets, paper files, and messaging apps to manage their
+                            litigation workflow. This leads to lost information, missed deadlines, inefficient
+                            collaboration, and difficulty retrieving case history. </p>
+                    </div>
+                    <div class="cs-card solution reveal">
+                        <h3>Our Solution</h3>
+                        <p>
+                            Puduo Legal was developed as an integrated platform that simplifies and organizes every
+                            stage of litigation management. It provides a structured system where legal teams can store
+                            case files, track deadlines, update progress, and manage communication all from one secure
+                            application.
+
+                            The system focuses on clarity, accessibility, and ease of use, reducing administrative time
+                            so legal practitioners can focus on legal strategy and client service. </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- UI/UX Section -->
+        <section id="ux" class="case-section">
+            <div class="container">
+                <h2 class="section-title reveal">UI / UX Highlights</h2>
+                <div class="case-blocks">
+                    <article class="case-block reveal">
+                        <div class="cb-content">
+                            <h4>Intuitive UI Design</h4>
+                            <p>Designed a modern progressive website with a cloud backend</p>
+                        </div>
+                        <div class="cb-media">
+                            <img src="images/litigation-mockup.jpg" alt="UI mockup">
+                        </div>
+                    </article>
+
+                    <!-- <article class="case-block reveal reverse">
+                        <div class="cb-content">
+                            <h4>Offline-First Web App</h4>
+                            <p>Service worker caching and network fallbacks to allow ordering even on flaky networks.
+                            </p>
+                        </div>
+                        <div class="cb-media">
+                            <img src="images/block-offline.png" alt="PWA illustration">
+                        </div>
+                    </article> -->
+
+                    <!-- <article class="case-block reveal">
+                        <div class="cb-content">
+                            <h4>API Integration</h4>
+                            <p>Resilient API layer........................</p>
+                        </div>
+                    </article> -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution -->
+        <section id="solution" class="case-section">
+            <div class="container">
+                <h2 class="section-title reveal">Solution & Results</h2>
+                <p class="reveal">After implementation, law firms that adopted PUDUO LEGAL experienced more organized
+                    workflows, quicker access to case information, and smoother coordination among team members.
+                    Deadlines became easier to track, daily operations became more predictable, and documentation was
+                    centralized rather than dispersed across multiple tools.
+
+                    Teams reported feeling more in control of their workload, with fewer administrative delays and
+                    clearer visibility into the status of each case. The system helped practitioners dedicate more time
+                    to client needs and legal strategy rather than manual organization.
+                </p>
+
+                <!-- <div class="container case-grid">
+                    <div class="reveal">
+                        <h3>Qualification Scoring</h3>
+                        <p>Scored leads during onboarding to prioritise promotions and personalize content.</p>
+                    </div>
+                    <div class="reveal">
+                        <h3>Offline Ordering</h3>
+                        <p>Orders submitted while offline are queued and synched when connectivity is restored.</p>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="description" width="100px" />
+                    </div>
+                    <p class="footer-description">
+                        Your trusted partner for innovative IT solutions that drive business growth.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="https://web.facebook.com/profile.php?id=61573105004412"
+                            class="social-link">Facebook</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#service">Services</a></li>
+                        <li><a href="index.html#service">Consulting</a></li>
+                        <li><a href="index.html#service">Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: info@puduotechnologies.com</li>
+                        <li>Phone: +1 (571) 239-5412</li>
+                        <li>Address:109 Huntington Way Dallas GA 30132 United States
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;Copyright 2025 Puduo. All Rights Reserved .</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared-modal.js"></script>
+    <script src="case-study.js"></script>
+</body>
+
+</html>
